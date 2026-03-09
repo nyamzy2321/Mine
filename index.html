@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MineTech Solutions - Global Mining Excellence</title>
+    <meta name="description" content="MineTech Solutions - Your trusted partner for professional mining services, mineral exploration, and mining technology solutions worldwide.">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#">
+                    <i class="fas fa-mountain"></i>
+                    <span>MineTech<span class="highlight">Solutions</span></span>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#equipment">Equipment</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#careers">Careers</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+            <h1>Global Mining Excellence Since 1999</h1>
+            <p>Delivering sustainable mining solutions with cutting-edge technology and industry expertise across 15 countries worldwide.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Get Started</a>
+                <a href="#projects" class="btn btn-secondary">View Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span class="counter" data-target="25">0</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-hard-hat"></i>
+                    <span class="counter" data-target="500">0</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-users"></i>
+                    <span class="counter" data-target="1200">0</span>
+                    <span class="stat-label">Employees Worldwide</span>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-globe"></i>
+                    <span class="counter" data-target="15">0</span>
+                    <span class="stat-label">Countries</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">About Us</span>
+                <h2>Leading the Mining Industry Forward</h2>
+                <p>With over 25 years of experience, MineTech Solutions has established itself as a global leader in mining services, delivering exceptional results through innovation, safety, and environmental responsibility.</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="about-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To be the most trusted and innovative mining solutions provider globally, setting industry standards for safety, sustainability, and technological advancement.</p>
+                </div>
+                <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="about-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To deliver superior mining solutions that maximize resource recovery while maintaining the highest standards of safety and environmental stewardship.</p>
+                </div>
+                <div class="about-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="about-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Our Values</h3>
+                    <p>Safety first, environmental responsibility, operational excellence, innovation, and commitment to our people and communities we serve.</p>
+                </div>
+            </div>
+            
+            <!-- Interactive Map -->
+            <div class="map-section" data-aos="fade-up">
+                <h3>Our Global Operations</h3>
+                <div id="minemap"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Our Services</span>
+                <h2>Comprehensive Mining Solutions</h2>
+                <p>We offer end-to-end mining services tailored to meet the unique challenges of each project, from exploration to rehabilitation.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Mineral Exploration</h3>
+                    <p>Advanced geological surveys, mapping, and analysis to identify viable mineral deposits using cutting-edge technology.</p>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-level-up-alt"></i>
+                    </div>
+                    <h3>Mining Extraction</h3>
+                    <p>Safe and efficient extraction methods including open-pit and underground mining operations with optimal resource recovery.</p>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Mineral Processing</h3>
+                    <p>State-of-the-art processing facilities for crushing, grinding, flotation, and refining to maximize mineral recovery.</p>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Safety & Risk Management</h3>
+                    <p>Comprehensive safety protocols, risk assessment, and management systems to ensure worker safety and operational compliance.</p>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Mining Technology Solutions</h3>
+                    <p>Innovative technology integration including automation, AI monitoring, drone surveys, and digital twin systems.</p>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Environmental Rehabilitation</h3>
+                    <p>Sustainable land restoration and environmental monitoring to minimize ecological footprint and ensure compliance.</p>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Our Projects</span>
+                <h2>Featured Mining Projects</h2>
+                <p>Explore our portfolio of successful mining operations across the globe, showcasing our expertise in various minerals.</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <i class="fas fa-coins"></i>
+                        <div class="project-overlay">
+                            <span class="mineral-badge">Gold</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Gold Mining Project</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Ghana</p>
+                        <p class="project-description">Advanced gold extraction operation with state-of-the-art processing facility.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <i class="fas fa-copper"></i>
+                        <div class="project-overlay">
+                            <span class="mineral-badge">Copper</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Copper Mining Project</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Zambia</p>
+                        <p class="project-description">Large-scale copper mining with sustainable processing and export infrastructure.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <i class="fas fa-bolt"></i>
+                        <div class="project-overlay">
+                            <span class="mineral-badge">Lithium</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Lithium Mining Project</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Zimbabwe</p>
+                        <p class="project-description">Strategic lithium extraction for battery and renewable energy applications.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <i class="fas fa-gem"></i>
+                        <div class="project-overlay">
+                            <span class="mineral-badge">Diamond</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Diamond Mining Project</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Botswana</p>
+                        <p class="project-description">Premier diamond recovery operation with advanced sorting technology.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-image">
+                        <i class="fas fa-star"></i>
+                        <div class="project-overlay">
+                            <span class="mineral-badge">Platinum</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Platinum Mining Project</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> South Africa</p>
+                        <p class="project-description">World-class platinum group metals extraction and refining facility.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="project-image">
+                        <i class="fas fa-fire"></i>
+                        <div class="project-overlay">
+                            <span class="mineral-badge">Coal</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Coal Mining Project</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Mozambique</p>
+                        <p class="project-description">Efficient coal mining operation with modern extraction and logistics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment Gallery Section -->
+    <section id="equipment" class="equipment-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Our Fleet</span>
+                <h2>Mining Equipment Gallery</h2>
+                <p>Our extensive fleet of modern mining equipment ensures efficient and safe operations across all project sites.</p>
+            </div>
+            
+            <div class="equipment-grid">
+                <div class="equipment-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="equipment-image">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Drilling Rigs</h3>
+                    <p>Advanced rotary and percussion drilling rigs for exploration and production.</p>
+                </div>
+                
+                <div class="equipment-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="equipment-image">
+                        <i class="fas fa-truck-monster"></i>
+                    </div>
+                    <h3>Excavators</h3>
+                    <p>Large-scale hydraulic excavators for efficient material handling.</p>
+                </div>
+                
+                <div class="equipment-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="equipment-image">
+                        <i class="fas fa-truck-loading"></i>
+                    </div>
+                    <h3>Haul Trucks</h3>
+                    <p>Heavy-duty haul trucks with high capacity for material transport.</p>
+                </div>
+                
+                <div class="equipment-card" data-aos="fade-up" data-aos-delay="250">
+                    <div class="equipment-image">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Crushing Equipment</h3>
+                    <p>Primary and secondary crushers for efficient ore size reduction.</p>
+                </div>
+                
+                <div class="equipment-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="equipment-image">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Processing Plants</h3>
+                    <p>Complete mineral processing and concentration facilities.</p>
+                </div>
+                
+                <div class="equipment-card" data-aos="fade-up" data-aos-delay="350">
+                    <div class="equipment-image">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Conveyor Systems</h3>
+                    <p>Automated conveyor systems for efficient material transport.</p>
+                </div>
+                
+                <div class="equipment-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="equipment-image">
+                        <i class="fas fa-tunnel"></i>
+                    </div>
+                    <h3>Underground Mining Machines</h3>
+                    <p>Specialized equipment for underground mining operations.</p>
+                </div>
+                
+                <div class="equipment-card" data-aos="fade-up" data-aos-delay="450">
+                    <div class="equipment-image">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>Safety Equipment</h3>
+                    <p>Comprehensive safety gear and monitoring systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Quality Assurance</span>
+                <h2>Certifications & Accreditations</h2>
+                <p>We maintain the highest industry standards through rigorous certification and compliance programs.</p>
+            </div>
+            
+            <div class="certifications-grid">
+                <div class="certification-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>ISO Quality Standards</h3>
+                    <p>ISO 9001:2015 certified for quality management systems</p>
+                </div>
+                
+                <div class="certification-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="cert-icon">
+                        <i class="fas fa Safety"></i>
+                    </div>
+                    <h3>ISO Safety Standards</h3>
+                    <p>ISO 45001:2018 certified for occupational health and safety</p>
+                </div>
+                
+                <div class="certification-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Government Mining Licenses</h3>
+                    <p>Full licensing and permits for mining operations in all operating regions</p>
+                </div>
+                
+                <div class="certification-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="cert-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Environmental Compliance</h3>
+                    <p>ISO 14001:2015 certified for environmental management systems</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Client Feedback</span>
+                <h2>What Our Clients Say</h2>
+                <p>Trusted by leading mining companies and governments worldwide.</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"MineTech Solutions has been instrumental in transforming our mining operations. Their expertise in mineral processing increased our recovery rates by 35%. Their commitment to safety and environmental standards is exemplary."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>James Morrison</h4>
+                            <p>CEO, African Minerals Corp</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"Working with MineTech on our copper project in Zambia was exceptional. Their team demonstrated technical excellence, on-time delivery, and unwavering safety standards. They are our go-to partner for future projects."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Chen</h4>
+                            <p>Director, Global Mining Holdings</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"The environmental rehabilitation work completed by MineTech exceeded our expectations. Their sustainable approach to mining reclamation has set new industry benchmarks. Highly professional and dedicated team."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Michael Thompson</h4>
+                            <p>Operations Manager, Southern Africa Resources</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers Section -->
+    <section id="careers" class="careers-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Join Our Team</span>
+                <h2>Career Opportunities</h2>
+                <p>Build your career with a global leader in mining solutions. We offer competitive packages and professional development opportunities.</p>
+            </div>
+            
+            <div class="careers-content">
+                <div class="positions-list" data-aos="fade-up">
+                    <div class="position-card">
+                        <div class="position-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="position-info">
+                            <h3>Mining Engineer</h3>
+                            <p>Design and oversee mining operations with a focus on safety and efficiency.</p>
+                            <span class="position-location"><i class="fas fa-map-marker-alt"></i> Various Locations</span>
+                        </div>
+                        <button class="btn-apply" data-position="Mining Engineer">Apply Now</button>
+                    </div>
+                    
+                    <div class="position-card">
+                        <div class="position-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <div class="position-info">
+                            <h3>Geologist</h3>
+                            <p>Conduct geological surveys and analyze mineral deposits for extraction planning.</p>
+                            <span class="position-location"><i class="fas fa-map-marker-alt"></i> Various Locations</span>
+                        </div>
+                        <button class="btn-apply" data-position="Geologist">Apply Now</button>
+                    </div>
+                    
+                    <div class="position-card">
+                        <div class="position-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <div class="position-info">
+                            <h3>Equipment Operator</h3>
+                            <p>Operate heavy mining equipment including drills, excavators, and haul trucks.</p>
+                            <span class="position-location"><i class="fas fa-map-marker-alt"></i> Various Locations</span>
+                        </div>
+                        <button class="btn-apply" data-position="Equipment Operator">Apply Now</button>
+                    </div>
+                    
+                    <div class="position-card">
+                        <div class="position-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <div class="position-info">
+                            <h3>Safety Officer</h3>
+                            <p>Implement safety protocols and ensure compliance with occupational health standards.</p>
+                            <span class="position-location"><i class="fas fa-map-marker-alt"></i> Various Locations</span>
+                        </div>
+                        <button class="btn-apply" data-position="Safety Officer">Apply Now</button>
+                    </div>
+                    
+                    <div class="position-card">
+                        <div class="position-icon">
+                            <i class="fas fa-map"></i>
+                        </div>
+                        <div class="position-info">
+                            <h3>GIS Analyst</h3>
+                            <p>Use geographic information systems for mapping, analysis, and decision support.</p>
+                            <span class="position-location"><i class="fas fa-map-marker-alt"></i> Various Locations</span>
+                        </div>
+                        <button class="btn-apply" data-position="GIS Analyst">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Application Modal -->
+            <div class="modal" id="applicationModal">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <h3>Apply for Position</h3>
+                    <form id="applicationForm">
+                        <div class="form-group">
+                            <label for="appName">Full Name *</label>
+                            <input type="text" id="appName" name="appName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="appEmail">Email Address *</label>
+                            <input type="email" id="appEmail" name="appEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="appPhone">Phone Number</label>
+                            <input type="tel" id="appPhone" name="appPhone">
+                        </div>
+                        <div class="form-group">
+                            <label for="position">Position *</label>
+                            <input type="text" id="position" name="position" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="resume">Upload Resume *</label>
+                            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Application</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2>Contact Us</h2>
+                <p>Ready to start your next mining project? Reach out to our expert team today.</p>
+            </div>
+            
+            <div class="contact-wrapper">
+                <div class="contact-info" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Headquarters</h4>
+                            <p>123 Mining Plaza, Suite 500<br>Johannesburg, South Africa</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+27 11 123 4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@minetechsolutions.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Business Hours</h4>
+                            <p>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 1:00 PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper" data-aos="fade-up" data-aos-delay="200">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interested In *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a Service</option>
+                                <option value="Mineral Exploration">Mineral Exploration</option>
+                                <option value="Mining Extraction">Mining Extraction</option>
+                                <option value="Mineral Processing">Mineral Processing</option>
+                                <option value="Safety & Risk Management">Safety & Risk Management</option>
+                                <option value="Mining Technology Solutions">Mining Technology Solutions</option>
+                                <option value="Environmental Rehabilitation">Environmental Rehabilitation</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content" data-aos="fade-up">
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>Stay updated with the latest mining industry news, project updates, and company announcements.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <a href="#">
+                            <i class="fas fa-mountain"></i>
+                            <span>MineTech<span class="highlight">Solutions</span></span>
+                        </a>
+                    </div>
+                    <p>Your trusted partner for global mining excellence since 1999. Delivering sustainable mining solutions with innovation and integrity.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Mineral Exploration</a></li>
+                        <li><a href="#services">Mining Extraction</a></li>
+                        <li><a href="#services">Mineral Processing</a></li>
+                        <li><a href="#services">Safety & Risk Management</a></li>
+                        <li><a href="#services">Technology Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Johannesburg, South Africa</li>
+                        <li><i class="fas fa-phone"></i> +27 11 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@minetechsolutions.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 MineTech Solutions. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    
+    <!-- AOS Animation JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
+
